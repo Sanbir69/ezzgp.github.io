@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sepatu Inspirasi Converse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Toko Kami" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#bantuan">Bantuan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Selamat Datang di Toko Sepatu Kami</h1>
+            <p>Temukan koleksi sepatu terbaru dan terpopuler.</p>
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </section>
+        <section id="produk">
+            <h2>Produk Terbaru</h2>
+            <div class="product-grid">
+                <div class="product-item" onclick="showProductDetails('Sepatu 1', 'Rp 500.000', 'Deskripsi tentang Sepatu 1')">
+                    <img src="sepatu1.jpg" alt="Sepatu 1">
+                    <h3>Sepatu 1</h3>
+                    <p>Harga: Rp 500.000</p>
+                    <button onclick="addToCart(event)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Sepatu 2', 'Rp 600.000', 'Deskripsi tentang Sepatu 2')">
+                    <img src="sepatu2.jpg" alt="Sepatu 2">
+                    <h3>Sepatu 2</h3>
+                    <p>Harga: Rp 600.000</p>
+                    <button onclick="addToCart(event)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Sepatu 3', 'Rp 550.000', 'Deskripsi tentang Sepatu 3')">
+                    <img src="sepatu3.jpg" alt="Sepatu 3">
+                    <h3>Sepatu 3</h3>
+                    <p>Harga: Rp 550.000</p>
+                    <button onclick="addToCart(event)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+        <section id="tentang">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah merek yang berkomitmen untuk memberikan produk berkualitas dan desain yang stylish.</p>
+        </section>
+        <section id="bantuan">
+            <h2>Bantuan</h2>
+            <p>Hubungi kami untuk pertanyaan lebih lanjut.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Toko Sepatu Kami. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Modal untuk Detail Produk -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <p id="modalProductPrice"></p>
+            <p id="modalProductDescription"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
